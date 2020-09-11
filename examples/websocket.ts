@@ -1,10 +1,27 @@
+import fetch from "node-fetch";
 import { exit } from "process";
 import ws from "ws";
 
 async function main() {
-  const token = "<quirk-developer-token>";
+  const domain = "websocket.quirk.gg";
 
-  const websocket = new ws(`wss://websocket.quirk.gg?token=${token}`);
+  const body = {
+    access_token: "<quirk-developer-token>",
+  };
+
+  const response = await fetch(`https://${domain}/token`, {
+    body: JSON.stringify(body),
+    headers: { "Content-Type": "application/json" },
+    method: "POST",
+  });
+
+  const data = await response.json();
+
+  const { access_token } = data;
+
+  const websocket = new ws(
+    `wss://websocket.quirk.gg?access_token=${access_token}`
+  );
 
   websocket.on("open", () => console.log("connected"));
 

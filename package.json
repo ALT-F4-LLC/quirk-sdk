@@ -8,9 +8,11 @@
     "name": "Dren, LLC"
   },
   "dependencies": {
+    "node-fetch": "^2.6.1",
     "ws": "^7.2.3"
   },
   "devDependencies": {
+    "@types/node-fetch": "^2.5.7",
     "@types/ws": "^7.2.3"
   }
 }
