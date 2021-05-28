@@ -1,4 +1,4 @@
-# quirk-sdk
+# sdk
 Quirk.gg SDK for use with Developer Tools features.
 
 ## Examples
