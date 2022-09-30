@@ -20,7 +20,7 @@ async function main() {
   const { access_token } = data;
 
   const websocket = new ws(
-    `wss://websocket.quirk.gg?access_token=${access_token}`
+    `wss://websocket.quirk.tools?access_token=${access_token}`
   );
 
   websocket.on("open", () => console.log("connected"));
