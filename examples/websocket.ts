@@ -3,7 +3,7 @@ import { exit } from "process";
 import ws from "ws";
 
 async function main() {
-  const domain = "websocket.quirk.gg";
+  const domain = "websocket.quirk.tools";
 
   const body = {
     access_token: "<quirk-developer-token>",
